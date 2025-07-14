@@ -18,7 +18,9 @@
     "render.EntityRendererMixin",
     "render.MinecraftMixin",
     "render.RenderManagerMixin",
-    "xray.BlockMixin"
+    "xray.BlockMixin",
+    "xray.EntityRendererMixin",
+    "xray.WorldRendererMixin"
   ],
   "plugin": "net.fabricmc.betterclient.MixinConfigPlugin",
   "injectors": {
