@@ -35,33 +35,38 @@ public class MinecraftMixin {
     }
     
     private void handleXrayKey() {
-        net.minecraft.class_1600 mc = net.minecraft.class_1600.method_2965();
-        if (mc == null || mc.field_3823 == null) return; // gameSettings field
-        
-        GameSettingsAccessor settings = (GameSettingsAccessor) mc.field_3823;
-        net.minecraft.class_327 xrayKey = settings.betterClient$getKeyBindingXray();
-        
-        if (xrayKey == null) return;
-        
-        boolean isXrayKeyDown = xrayKey.field_889; // isPressed field
-        long currentTime = System.currentTimeMillis();
-        
-        // Debounced key press detection
-        if (isXrayKeyDown && !xrayKeyPressed && (currentTime - lastKeyPressTime) > KEY_DEBOUNCE_MS) {
-            xrayKeyPressed = true;
-            lastKeyPressTime = currentTime;
+        try {
+            net.minecraft.class_1600 mc = net.minecraft.class_1600.method_2965();
+            if (mc == null || mc.field_3823 == null) return; // gameSettings field
             
-            // Toggle X-ray through settings accessor
-            settings.betterClient$toggleXray();
+            GameSettingsAccessor settings = (GameSettingsAccessor) mc.field_3823;
+            net.minecraft.class_327 xrayKey = settings.betterClient$getKeyBindingXray();
             
-            // Provide user feedback
-            if (mc.field_3811 != null) { // thePlayer field
-                String message = settings.betterClient$getXrayEnabled() ? "§aX-ray Enabled" : "§cX-ray Disabled";
-                // Try to send message to player - would need proper obfuscated method
-                // In 1.6.4, it might be something like addChatComponentMessage
+            if (xrayKey == null) return;
+            
+            boolean isXrayKeyDown = xrayKey.field_889; // isPressed field
+            long currentTime = System.currentTimeMillis();
+            
+            // Debounced key press detection
+            if (isXrayKeyDown && !xrayKeyPressed && (currentTime - lastKeyPressTime) > KEY_DEBOUNCE_MS) {
+                xrayKeyPressed = true;
+                lastKeyPressTime = currentTime;
+                
+                // Toggle X-ray through settings accessor
+                settings.betterClient$toggleXray();
+                
+                // Provide user feedback
+                if (mc.field_3811 != null) { // thePlayer field
+                    String message = settings.betterClient$getXrayEnabled() ? "§aX-ray Enabled" : "§cX-ray Disabled";
+                    // Status message - in a real implementation this would use the proper chat method
+                    System.out.println("BetterClient: " + message.replace("§a", "").replace("§c", ""));
+                }
+            } else if (!isXrayKeyDown) {
+                xrayKeyPressed = false;
             }
-        } else if (!isXrayKeyDown) {
-            xrayKeyPressed = false;
+        } catch (Exception e) {
+            // Handle any casting or reflection errors gracefully
+            System.err.println("BetterClient: Error in X-ray key handling: " + e.getMessage());
         }
     }
 }

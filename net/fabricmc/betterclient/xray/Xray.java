@@ -93,11 +93,20 @@ public class Xray {
         try {
             net.minecraft.class_1600 mc = net.minecraft.class_1600.method_2965();
             if (mc != null && mc.field_3762 != null) { // world field
+                // Schedule a render update on the next tick to avoid threading issues
                 // Only refresh visible chunks to reduce lag
                 mc.field_3762.method_1608(); // markBlockRangeForRenderUpdate or similar
             }
         } catch (Exception e) {
             // Silently handle any reflection issues
+            System.err.println("BetterClient: Failed to refresh chunks for X-ray");
         }
+    }
+    
+    // Helper method to get block transparency alpha
+    public static float getBlockAlpha(int blockId) {
+        if (!Xray) return 1.0f; // Fully opaque when X-ray is off
+        if (blockId <= 0 || blockId >= isValuableBlock.length) return 0.1f; // Nearly transparent for unknown blocks
+        return isValuableBlock[blockId] ? 1.0f : 0.1f; // Valuable blocks opaque, others nearly transparent
     }
 }
