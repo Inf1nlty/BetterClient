@@ -1,0 +1,11 @@
+key.holdleft=Hold Left
+key.holdright=Hold Right
+key.xray=Xray
+lanserverproperties.gui.allow_pvp=Allow PvP
+lanserverproperties.gui.max_player=Max Player
+lanserverproperties.gui.online_mode=Online Mode
+lanserverproperties.gui.online_mode_desc=Disable this will allow unauthenticated connections
+lanserverproperties.gui.port=Listening Port
+auto.fish.on=Auto phishing activated
+auto.fish.off=Automated phishing has been turned off
+auto.fish.no=The bait has run out, shutting down the automatic fishing process

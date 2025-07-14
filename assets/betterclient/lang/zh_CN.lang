@@ -1,0 +1,11 @@
+key.holdleft=锁定左键
+key.holdright=锁定右键
+key.xray=透视
+lanserverproperties.gui.online_mode=在线模式
+lanserverproperties.gui.online_mode_desc=禁用此选项将允许非正版玩家加入
+lanserverproperties.gui.port=监听端口
+lanserverproperties.gui.allow_pvp=允许PvP
+lanserverproperties.gui.max_player=最大玩家数量
+auto.fish.on=已开启自动钓鱼
+auto.fish.off=已关闭自动钓鱼
+auto.fish.no=饵料已用完，关闭自动钓鱼

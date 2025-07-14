@@ -1,0 +1,98 @@
+{
+  "mappings": {
+    "net/fabricmc/betterclient/mixin/GameSettingsMixin": {
+      "<init>(Lnet/minecraft/src/Minecraft;Ljava/io/File;)V": "Lnet/minecraft/class_347;<init>(Lnet/minecraft/class_1600;Ljava/io/File;)V",
+      "Lnet/minecraft/src/GameSettings;mc:Lnet/minecraft/src/Minecraft;": "Lnet/minecraft/class_347;field_946:Lnet/minecraft/class_1600;"
+    },
+    "net/fabricmc/betterclient/mixin/GuiAchievementMixin": {
+      "updateAchievementWindow()V": "Lnet/minecraft/class_399;method_1091()V"
+    },
+    "net/fabricmc/betterclient/mixin/fish/EntityFishingHookTrans": {
+      "checkForBite()Z": "Lnet/minecraft/class_993;checkForBite()Z"
+    },
+    "net/fabricmc/betterclient/mixin/fish/EntityPlayerTrans": {
+      "Lnet/minecraft/src/EntityLivingBase;onLivingUpdate()V": "Lnet/minecraft/class_1699;method_2651()V",
+      "onLivingUpdate()V": "Lnet/minecraft/class_988;method_2651()V"
+    },
+    "net/fabricmc/betterclient/mixin/fish/FishingRodItemBaitedTrans": {
+      "Lnet/minecraft/src/World;spawnEntityInWorld(Lnet/minecraft/src/Entity;)Z": "Lnet/minecraft/class_1150;method_3686(Lnet/minecraft/class_864;)Z",
+      "onItemRightClick": "Lbtw/item/items/FishingRodItemBaited;method_3358(Lnet/minecraft/class_1071;Lnet/minecraft/class_1150;Lnet/minecraft/class_988;)Lnet/minecraft/class_1071;"
+    },
+    "net/fabricmc/betterclient/mixin/info/GuiIngameMixin": {
+      "Lnet/minecraft/src/GuiIngame;remainingHighlightTicks:I": "Lnet/minecraft/class_371;field_5074:I",
+      "renderGameOverlay": "Lnet/minecraft/class_371;method_979(FZII)V"
+    },
+    "net/fabricmc/betterclient/mixin/lan/GuiIngameMenuMixin": {
+      "actionPerformed": "Lnet/minecraft/class_385;method_1027(Lnet/minecraft/class_356;)V"
+    },
+    "net/fabricmc/betterclient/mixin/pinyin/GuiContainerCreativeMixin": {
+      "updateCreativeSearch": "Lnet/minecraft/class_415;method_1150()V"
+    },
+    "net/fabricmc/betterclient/mixin/render/EntityRendererMixin": {
+      "Lnet/minecraft/src/Profiler;endStartSection(Ljava/lang/String;)V": "Lnet/minecraft/class_839;method_2360(Ljava/lang/String;)V",
+      "renderWorld": "Lnet/minecraft/class_524;method_1326(FJ)V"
+    },
+    "net/fabricmc/betterclient/mixin/render/MinecraftMixin": {
+      "runTick": "Lnet/minecraft/class_1600;method_2954()V"
+    },
+    "net/fabricmc/betterclient/mixin/xray/BlockMixin": {
+      "getAmbientOcclusionLightValue": "Lnet/minecraft/class_197;method_465(Lnet/minecraft/class_1158;III)F",
+      "shouldSideBeRendered": "Lnet/minecraft/class_197;method_447(Lnet/minecraft/class_1158;IIII)Z"
+    },
+    "net/fabricmc/betterclient/mixin/xray/EntityLivingBaseMixin": {
+      "isPotionActive(Lnet/minecraft/src/Potion;)Z": "Lnet/minecraft/class_1699;method_6107(Lnet/minecraft/class_860;)Z"
+    },
+    "net/fabricmc/betterclient/mixin/xray/EntityRendererNoOverwriteMixin": {
+      "getNightVisionBrightness": "Lnet/minecraft/class_524;method_4301(Lnet/minecraft/class_988;F)F"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/fabricmc/betterclient/mixin/GameSettingsMixin": {
+        "<init>(Lnet/minecraft/src/Minecraft;Ljava/io/File;)V": "Lnet/minecraft/class_347;<init>(Lnet/minecraft/class_1600;Ljava/io/File;)V",
+        "Lnet/minecraft/src/GameSettings;mc:Lnet/minecraft/src/Minecraft;": "Lnet/minecraft/class_347;field_946:Lnet/minecraft/class_1600;"
+      },
+      "net/fabricmc/betterclient/mixin/GuiAchievementMixin": {
+        "updateAchievementWindow()V": "Lnet/minecraft/class_399;method_1091()V"
+      },
+      "net/fabricmc/betterclient/mixin/fish/EntityFishingHookTrans": {
+        "checkForBite()Z": "Lnet/minecraft/class_993;checkForBite()Z"
+      },
+      "net/fabricmc/betterclient/mixin/fish/EntityPlayerTrans": {
+        "Lnet/minecraft/src/EntityLivingBase;onLivingUpdate()V": "Lnet/minecraft/class_1699;method_2651()V",
+        "onLivingUpdate()V": "Lnet/minecraft/class_988;method_2651()V"
+      },
+      "net/fabricmc/betterclient/mixin/fish/FishingRodItemBaitedTrans": {
+        "Lnet/minecraft/src/World;spawnEntityInWorld(Lnet/minecraft/src/Entity;)Z": "Lnet/minecraft/class_1150;method_3686(Lnet/minecraft/class_864;)Z",
+        "onItemRightClick": "Lbtw/item/items/FishingRodItemBaited;method_3358(Lnet/minecraft/class_1071;Lnet/minecraft/class_1150;Lnet/minecraft/class_988;)Lnet/minecraft/class_1071;"
+      },
+      "net/fabricmc/betterclient/mixin/info/GuiIngameMixin": {
+        "Lnet/minecraft/src/GuiIngame;remainingHighlightTicks:I": "Lnet/minecraft/class_371;field_5074:I",
+        "renderGameOverlay": "Lnet/minecraft/class_371;method_979(FZII)V"
+      },
+      "net/fabricmc/betterclient/mixin/lan/GuiIngameMenuMixin": {
+        "actionPerformed": "Lnet/minecraft/class_385;method_1027(Lnet/minecraft/class_356;)V"
+      },
+      "net/fabricmc/betterclient/mixin/pinyin/GuiContainerCreativeMixin": {
+        "updateCreativeSearch": "Lnet/minecraft/class_415;method_1150()V"
+      },
+      "net/fabricmc/betterclient/mixin/render/EntityRendererMixin": {
+        "Lnet/minecraft/src/Profiler;endStartSection(Ljava/lang/String;)V": "Lnet/minecraft/class_839;method_2360(Ljava/lang/String;)V",
+        "renderWorld": "Lnet/minecraft/class_524;method_1326(FJ)V"
+      },
+      "net/fabricmc/betterclient/mixin/render/MinecraftMixin": {
+        "runTick": "Lnet/minecraft/class_1600;method_2954()V"
+      },
+      "net/fabricmc/betterclient/mixin/xray/BlockMixin": {
+        "getAmbientOcclusionLightValue": "Lnet/minecraft/class_197;method_465(Lnet/minecraft/class_1158;III)F",
+        "shouldSideBeRendered": "Lnet/minecraft/class_197;method_447(Lnet/minecraft/class_1158;IIII)Z"
+      },
+      "net/fabricmc/betterclient/mixin/xray/EntityLivingBaseMixin": {
+        "isPotionActive(Lnet/minecraft/src/Potion;)Z": "Lnet/minecraft/class_1699;method_6107(Lnet/minecraft/class_860;)Z"
+      },
+      "net/fabricmc/betterclient/mixin/xray/EntityRendererNoOverwriteMixin": {
+        "getNightVisionBrightness": "Lnet/minecraft/class_524;method_4301(Lnet/minecraft/class_988;F)F"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.fabricmc.betterclient.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "GameSettingsMixin",
+    "GuiAchievementMixin",
+    "fish.EntityFishingHookTrans",
+    "fish.EntityPlayerTrans",
+    "fish.FishingRodItemBaitedTrans",
+    "info.GuiIngameMixin",
+    "lan.GuiIngameMenuMixin",
+    "lan.IntegratedPlayerListMixin",
+    "lan.IntegratedServerListenThreadMixin",
+    "pinyin.EmiSearchMixin",
+    "pinyin.GuiContainerCreativeMixin",
+    "render.EntityRendererMixin",
+    "render.MinecraftMixin",
+    "render.RenderManagerMixin",
+    "xray.BlockMixin"
+  ],
+  "plugin": "net.fabricmc.betterclient.MixinConfigPlugin",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "BetterClient-refmap.json"
+}
